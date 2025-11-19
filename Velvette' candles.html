@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvetté Candle</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="file:///C:/Users/LAPTOP/Downloads/582063280_1155405206254950_7499807533163882739_n-removebg-preview.png">
+
+    <style>
+        /* FULL PAGE ANIMATED BACKGROUND */
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            color: #e0d8ff;
+
+            background: linear-gradient(135deg, #120d18, #2b1545, #0d0d12);
+            background-size: 400% 400%;
+            animation: bgFlow 14s infinite alternate;
+        }
+
+        @keyframes bgFlow {
+            0% { background-position: left top; }
+            100% { background-position: right bottom; }
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.35); 
+            z-index: -1;
+        }
+
+        /* PARALLAX HERO */
+        .parallax {
+            background: linear-gradient(135deg, #1a1a24, #3b1f5e, #120e1c);
+            background-size: 300% 300%;
+            animation: gradientMove 10s infinite alternate;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #f3e8ff;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: left; }
+            100% { background-position: right; }
+        }
+
+        .premium-heading {
+            font-size: 80px;
+            font-weight: 800;
+            background: linear-gradient(180deg, #f7e3b8, #c9a86a);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s;
+        }
+
+        .tagline {
+            font-size: 24px;
+            color: #d8c4ff;
+            letter-spacing: 2px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1.3s;
+        }
+
+        .section {
+            padding: 70px 12%;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: 1s;
+        }
+
+        .logo {
+            width: 260px;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 45px;
+            color: #caa6ff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            max-width: 850px;
+            margin: auto;
+            color: #d7cfff;
+            line-height: 1.6;
+        }
+
+        .advantages {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .adv-box {
+            width: 280px;
+            background-color: rgba(26, 26, 36, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 18px rgba(120,70,255,0.25);
+            transition: 0.3s;
+            backdrop-filter: blur(6px);
+        }
+
+        .adv-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(180,130,255,0.4);
+        }
+
+        .adv-icon {
+            font-size: 50px;
+            color: #caa6ff;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(90,40,200,0.3);
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(160,120,255,0.4);
+        }
+
+        .footer {
+            background-color: rgba(19, 19, 26, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            text-align: center;
+            color: #b89cff;
+            margin-top: 60px;
+            border-top: 1px solid #2e2e3b;
+        }
+
+        .footer h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            font-size: 18px;
+            color: #d0c4ff;
+        }
+
+        .show {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- PARALLAX BANNER -->
+    <div class="parallax">
+        <div class="premium-heading">Velvetté</div>
+        <div class="tagline">Where Luxury Meets Aroma</div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="section">
+        <img src="file:///C:/Users/LAPTOP/Downloads/582063280_1155405206254950_7499807533163882739_n-removebg-preview.png" class="logo" alt="Velvetté Logo">
+
+        <div class="title">Premium Aromatic Candles</div>
+
+        <p class="subtitle">
+            Velvetté Candle blends luxury, warmth, and elegance into every handcrafted piece. 
+            Made with pure soy wax, soothing essential oils, and a velvet-soft aesthetic, 
+            our candles are designed to elevate your mood, study sessions, and home ambience.
+        </p>
+    </div>
+
+    <!-- ADVANTAGES SECTION -->
+    <div class="section">
+        <div class="title">Why Choose Velvetté?</div>
+
+        <div class="advantages">
+            <div class="adv-box">
+                <div class="adv-icon">✨</div>
+                <h3>Premium Look</h3>
+                <p>Luxurious design with hand-poured craftsmanship.</p>
+            </div>
+
+            <div class="adv-box">
+                <div class="adv-icon">🌿</div>
+                <h3>Eco-Friendly</h3>
+                <p>Pure soy wax, natural oils, and recyclable jars.</p>
+            </div>
+
+            <div class="adv-box">
+                <div class="adv-icon">🔥</div>
+                <h3>Slow Burn</h3>
+                <p>Clean, long-lasting burn for maximum comfort.</p>
+            </div>
+
+            <div class="adv-box">
+                <div class="adv-icon">💜</div>
+                <h3>Mood Enhancing</h3>
+                <p>Relaxing scents for stress relief and focus.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALLERY SECTION -->
+    <div class="section">
+        <div class="title">Gallery</div>
+
+        <div class="gallery">
+            <img src="data:image/jpeg;base64,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
+          " alt="Candle Image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRXPfxh7cLdGWLFcTlPNX902JePM8hLu3iTg&s" alt="Candle Image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEyqfua0O7cdstFfsSWOHq3GXJe4lMQTSEAg&s" alt="Candle Image">
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <h3>Created By</h3>
+        <p><strong>Vedang Joshi</strong></p>
+        <p><strong>Anand Raj Tiwari</strong></p>
+        <p><strong>Rahul Sharma</strong></p>
+        <p><strong>Prince Singh</strong></p>
+        <p><strong>Shiv Kumar</strong></p>
+
+        <h3>Contact Info</h3>
+        <p>Email: example@gmail.com</p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+    </div>
+
+    <!-- SCROLL ANIMATION SCRIPT -->
+    <script>
+        const animatedItems = document.querySelectorAll('.section, .premium-heading, .tagline');
+
+        function revealOnScroll() {
+            animatedItems.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
+</body>
+</html>
